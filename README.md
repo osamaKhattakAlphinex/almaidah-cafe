@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Al Maidah Cafe
+
+A modern Next.js 14 application built with the App Router architecture, featuring a sophisticated black and golden yellow brand identity.
+
+## Brand Colors
+
+- **Near-Black**: `#0a0a0a` - Primary background color (softer on eyes than pure black)
+- **Golden Yellow**: `#EFB713` - Primary accent and text color
+- **Dark Gold**: `#C99A0E` - Hover states and darker accents
+- **Cream**: `#FDF6DC` - Subtle warm backgrounds and highlights
+
+## CSS Variables
+
+The project uses CSS variables for consistent theming:
+
+- `--gold`: #EFB713
+- `--black`: #0a0a0a
+
+## Design Features
+
+- **Custom Box Shadow**: `shadow-glow-gold` - Golden glow effect for interactive elements
+- **Noise Texture**: `bg-noise` - Subtle grain overlay for warm, aged-cafe aesthetic
+- **Diagonal Lines**: `bg-diagonal-lines` and `bg-diagonal-lines-subtle` - Repeating diagonal pattern for texture
+- **Cafe Divider**: `.cafe-divider` with `.cafe-divider-icon` - Decorative section separator with centered diamond
+- **Smooth Scroll**: Global smooth scrolling behavior enabled
+- **Custom Selection**: Text selection highlights in gold with black text
+- **Typography**:
+  - Display font (Playfair Display) for headings - `font-display`
+  - Body font (Nunito Sans) for readable content - `font-body`
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Theme Management**: next-themes
+- **Fonts**: Google Fonts (Nunito Sans & Playfair Display)
+
+## Project Structure
+
+```
+almaidah-cafe/
+├── app/                 # Next.js App Router pages and layouts
+│   ├── demo/           # Demo page with navbar showcase
+│   ├── showcase/       # Design system showcase
+│   └── ...
+├── components/          # Reusable React components
+│   ├── ui/             # UI components (buttons, cards, etc.)
+│   ├── Navbar.tsx      # Main navigation component
+│   ├── Hero.tsx        # Hero section component
+│   └── theme-provider.tsx
+├── lib/                # Utility functions and helpers
+├── public/             # Static assets (images, fonts, etc.)
+│   └── hero-bg.jpg    # Hero background image (add your own)
+├── styles/             # Additional styles (if needed)
+└── ...config files
+```
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design System
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Colors
 
-## Learn More
+- Use `bg-brand-black` and `text-brand-gold` for primary styling
+- Use `bg-brand-gold` and `text-brand-black` for CTAs and highlights
+- Hover states use opacity variations or `brand-darkgold`
+- CSS variables: `var(--gold)` and `var(--black)` available globally
 
-To learn more about Next.js, take a look at the following resources:
+### Typography
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Display Font**: Playfair Display - Use `font-display` for headings
+- **Body Font**: Nunito Sans - Use `font-body` for body text
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Decorative Elements
 
-## Deploy on Vercel
+- **Cafe Divider**: Use `.cafe-divider` with `.cafe-divider-icon` for section separators
+- **Background Textures**:
+  - `.bg-noise` - Subtle grain texture
+  - `.bg-diagonal-lines` - Diagonal stripe pattern
+  - `.bg-diagonal-lines-subtle` - More subtle diagonal pattern
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All components follow the black and gold color scheme with consistent hover effects and transitions.
+
+#### Key Components
+
+- **Navbar**: Sticky navigation with backdrop blur, animated links, and mobile hamburger menu
+- **Hero**: Full-viewport hero section with layered backgrounds, dramatic typography, and CTAs
+- **Button**: Primary, outline, and ghost variants with hover animations
+- **Card**: Content cards with golden borders and hover effects
+- **CafeDivider**: Decorative section separator with diamond icon
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+
+## License
+
+MIT

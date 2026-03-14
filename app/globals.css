@@ -1,27 +1,173 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@300;400;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --foreground: #efb713;
+    --gold: #efb713;
+    --black: #0a0a0a;
 }
 
+/* Responsive base font size */
+html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--black);
+    color: var(--gold);
+    overflow-x: hidden;
+}
+
+/* Universal box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom text selection */
+::selection {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
+::-moz-selection {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
+@layer base {
+    * {
+        @apply border-brand-gold/20;
+    }
+
+    /* Accessibility: Focus visible styles */
+    *:focus-visible {
+        @apply outline-none ring-2 ring-brand-gold ring-offset-2 ring-offset-black;
+    }
+
+    /* Remove default focus styles */
+    button:focus,
+    a:focus,
+    input:focus,
+    textarea:focus,
+    select:focus {
+        @apply outline-none;
+    }
+
+    /* Ensure focus-visible works properly */
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible {
+        @apply ring-2 ring-brand-gold ring-offset-2 ring-offset-black;
+    }
+}
+
+@layer components {
+
+    /* Decorative cafe divider with diamond icon */
+    .cafe-divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 3rem 0;
+        width: 100%;
+    }
+
+    .cafe-divider::before,
+    .cafe-divider::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid var(--gold);
+        opacity: 0.4;
+    }
+
+    .cafe-divider::before {
+        margin-right: 1.5rem;
+    }
+
+    .cafe-divider::after {
+        margin-left: 1.5rem;
+    }
+
+    .cafe-divider-icon {
+        position: relative;
+        width: 12px;
+        height: 12px;
+        background-color: var(--gold);
+        transform: rotate(45deg);
+        box-shadow: 0 0 10px rgba(239, 183, 19, 0.5);
+    }
+
+    /* Alternative with content */
+    .cafe-divider-with-icon::before {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid var(--gold);
+        opacity: 0.4;
+        margin-right: 1.5rem;
+    }
+
+    .cafe-divider-with-icon::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid var(--gold);
+        opacity: 0.4;
+        margin-left: 1.5rem;
+    }
+
+    /* Diagonal lines background pattern */
+    .bg-diagonal-lines {
+        position: relative;
+        background-color: var(--black);
+        background-image: repeating-linear-gradient(45deg,
+                transparent,
+                transparent 10px,
+                rgba(239, 183, 19, 0.03) 10px,
+                rgba(239, 183, 19, 0.03) 20px);
+    }
+
+    /* Alternative diagonal pattern - more subtle */
+    .bg-diagonal-lines-subtle {
+        position: relative;
+        background-color: var(--black);
+        background-image: repeating-linear-gradient(-45deg,
+                transparent,
+                transparent 15px,
+                rgba(239, 183, 19, 0.02) 15px,
+                rgba(239, 183, 19, 0.02) 30px);
+    }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    /* Utility for gold text with glow */
+    .text-gold-glow {
+        color: var(--gold);
+        text-shadow: 0 0 20px rgba(239, 183, 19, 0.3);
+    }
+
+    /* Utility for smooth transitions */
+    .transition-smooth {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
