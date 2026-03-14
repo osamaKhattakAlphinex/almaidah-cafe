@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Contact } from "@/components/Contact";
-import { MapPin, Phone, Clock, Mail, MessageCircle, Navigation } from "lucide-react";
+import { MapPin, Phone, MessageCircle, Navigation } from "lucide-react";
 
 export default function ContactPage() {
     const contactMethods = [
@@ -76,8 +76,8 @@ export default function ContactPage() {
                             Get in Touch
                         </h1>
                         <p className="font-body text-base sm:text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-                            Have a question, feedback, or craving? We'd love to hear from you.
-                            Reach out and let's make your next meal memorable!
+                            Have a question, feedback, or craving? We&apos;d love to hear from you.
+                            Reach out and let&apos;s make your next meal memorable!
                         </p>
                     </motion.div>
                 </div>
@@ -156,7 +156,7 @@ export default function ContactPage() {
                             Opening Hours
                         </h2>
                         <p className="font-body text-base md:text-lg text-white/70">
-                            We're here to serve you throughout the week
+                            We&apos;re here to serve you throughout the week
                         </p>
                     </motion.div>
 

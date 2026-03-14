@@ -107,7 +107,7 @@ export function About() {
                             <p>
                                 Welcome to <span className="text-brand-gold font-semibold">Almaidah Cafe</span>,
                                 your local fast food destination in the heart of Hayatabad Phase 6, Peshawar.
-                                We're not just another eatery — we're a celebration of bold flavors,
+                                We&apos;re not just another eatery — we&apos;re a celebration of bold flavors,
                                 lightning-fast service, and the vibrant street food culture that makes
                                 Peshawar truly special.
                             </p>
@@ -121,14 +121,14 @@ export function About() {
                             </p>
 
                             <p>
-                                We believe great food brings people together. Whether you're grabbing
+                                We believe great food brings people together. Whether you&apos;re grabbing
                                 a quick bite between classes, enjoying a family meal, or satisfying
-                                those late-night cravings, we're here to serve you with a smile and
+                                those late-night cravings, we&apos;re here to serve you with a smile and
                                 food that hits the spot every single time.
                             </p>
 
                             <p className="text-brand-gold/90 font-semibold italic text-sm md:text-base">
-                                "Fast food with heart, flavor with soul — that's the Almaidah promise."
+                                &quot;Fast food with heart, flavor with soul — that&apos;s the Almaidah promise.&quot;
                             </p>
                         </div>
 

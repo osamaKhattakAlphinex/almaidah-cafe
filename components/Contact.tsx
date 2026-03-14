@@ -38,7 +38,7 @@ export function Contact() {
             } else {
                 setSubmitMessage({ type: "error", text: data.message });
             }
-        } catch (error) {
+        } catch {
             setSubmitMessage({
                 type: "error",
                 text: "Something went wrong. Please try again.",

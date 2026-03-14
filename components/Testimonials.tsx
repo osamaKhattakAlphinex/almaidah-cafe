@@ -139,8 +139,8 @@ export function Testimonials() {
                             key={index}
                             onClick={() => setCurrentIndex(index)}
                             className={`transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black ${index === currentIndex
-                                    ? "w-8 h-3 bg-brand-gold"
-                                    : "w-3 h-3 bg-brand-gold/30 hover:bg-brand-gold/50"
+                                ? "w-8 h-3 bg-brand-gold"
+                                : "w-3 h-3 bg-brand-gold/30 hover:bg-brand-gold/50"
                                 }`}
                             aria-label={`Go to testimonial ${index + 1}`}
                         />
@@ -194,7 +194,7 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
 
                 {/* Review Text */}
                 <p className="font-body text-white text-sm md:text-base leading-relaxed mb-5 md:mb-6 min-h-[100px] md:min-h-[120px]">
-                    "{testimonial.review}"
+                    &quot;{testimonial.review}&quot;
                 </p>
 
                 {/* Reviewer Info */}

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Coffee, Utensils, Clock } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "./ui/card";
+import { Card, CardHeader, CardTitle, CardDescription } from "./ui/card";
 
 export function ExampleSection() {
     const features = [

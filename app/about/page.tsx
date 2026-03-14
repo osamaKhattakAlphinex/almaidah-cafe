@@ -98,17 +98,17 @@ export default function AboutPage() {
                                     meets innovation.
                                 </p>
                                 <p>
-                                    Located in the bustling Phase 6 of Hayatabad, we've quickly become a favorite
+                                    Located in the bustling Phase 6 of Hayatabad, we&apos;ve quickly become a favorite
                                     among students, families, and food lovers alike. Our secret? We treat every
-                                    customer like family and every order like it's our own meal.
+                                    customer like family and every order like it&apos;s our own meal.
                                 </p>
                                 <p>
                                     From our signature burgers to our mouthwatering shawarmas, every item on our
                                     menu is crafted with premium ingredients and time-tested recipes. We believe
-                                    that fast food doesn't have to mean compromising on taste or quality.
+                                    that fast food doesn&apos;t have to mean compromising on taste or quality.
                                 </p>
                                 <p className="text-brand-gold font-semibold">
-                                    Today, we're proud to serve hundreds of happy customers every week, and we're
+                                    Today, we&apos;re proud to serve hundreds of happy customers every week, and we&apos;re
                                     just getting started!
                                 </p>
                             </div>

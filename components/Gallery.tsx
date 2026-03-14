@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const galleryImages = [
     {
@@ -116,10 +117,12 @@ export function Gallery() {
                             className={`relative overflow-hidden rounded-lg ${image.span}`}
                         >
                             {/* Image */}
-                            <img
+                            <Image
                                 src={image.src}
                                 alt={image.alt}
-                                className="absolute inset-0 w-full h-full object-cover"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 50vw, 33vw"
                             />
                         </motion.div>
                     ))}
