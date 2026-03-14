@@ -33,8 +33,7 @@ export default function Home() {
       {/* Contact Section */}
       <Contact />
 
-      {/* Footer */}
-      <Footer />
+
     </>
   );
 }
